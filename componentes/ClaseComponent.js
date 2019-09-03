@@ -5,8 +5,8 @@ export default (props)=>(
                 <h2>Clase de {props.nombre}</h2>   
                 {props.clase.map(item=>{
                     return (
-                        <div id="clase-list">
-                            <img src={item.foto} alt=""/>
+                        <div className="clase-list">
+                            <img  src={item.foto} alt=""/>
                             <p>{item.first_name} {item.last_name}</p>
                         </div>
                         )
@@ -16,12 +16,25 @@ export default (props)=>(
                         {
                         `
                             #clase-container{
-                                perspective:500px;
+                                perspective:500;
                             }
-                            #clase-list{
+                            .clase-list{
                                 display: flex;
                             }
-                            
+                            .clase-list img{
+                                padding:3px;
+                                border:1px solid #ccc;
+                                margin:5px;
+                            }
+                            .clase-list p{
+                                font-size:10px;
+                                font-weight:bold;
+                                font-style:italic;
+                                margin-left:12px;
+                            }
+                            .clase-list:hover{
+                                transform:translateY(10px)scale(1);
+                            }                         
                         `
                         }
                 </style>

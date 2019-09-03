@@ -126,10 +126,21 @@ const ciencias = [{
 
 export default ()=>(
     <div>
-        <h1>Introducción a REACT !!!</h1>
-        <p>Curso del Plan</p>
-        <ClaseComponent nombre="Matemáticas" clase={matematicas}/>
-        <ClaseComponent nombre="Ciencias" clase={ciencias}/>
+        <h1 style={{textAlign:"center"}}>Introducción a REACT !!!</h1>
+
+        <div style={{display:"flex", justifyContent:"space-around"}}>
+            <ClaseComponent nombre="Matemáticas" clase={matematicas}/>
+            <ClaseComponent nombre="Ciencias" clase={ciencias}/>
+        </div>
+        <style jsx global>
+            {
+                `
+                body{
+                    background:#ffca20;
+                }
+                `
+            }
+        </style>
     </div>
 )
 
